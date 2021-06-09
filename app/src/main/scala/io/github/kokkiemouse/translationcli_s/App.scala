@@ -3,10 +3,13 @@
  */
 package io.github.kokkiemouse.translationcli_s
 
+import io.github.kokkiemouse.translationcli_s.excite.ExciteTranslate
+
 object App {
   def main(args: Array[String]): Unit = {
-    println(greeting())
+    var excitetrans=new ExciteTranslate("ENJA");
+    for(arg <- args ){
+      println("Result : " + excitetrans.getTranslatedText(arg))
+    }
   }
-
-  def greeting(): String = "Hello, world!"
 }
